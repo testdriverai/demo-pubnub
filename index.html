@@ -125,7 +125,7 @@
 
                 pubnub.addListener({ // Get new messages.
                     message: function(msg) {
-                        // console.log(msg);
+                        console.log('subscribed', msg);
                         if (msg.publisher == pubnub.getUUID()) { // Check who sent the message.
                             chat.publishMessage('You', msg.message);
                         } else {
@@ -148,6 +148,7 @@
                             channel: channel,
                             message: msg
                         };
+                        console.log('publishing', publishConfig)
                         pubnub.publish(publishConfig, function(status, response) { // Publish message to current channel.
                            // console.log(status, response);
                         });
@@ -166,6 +167,7 @@
                     channels: [channel],
                 }).then((response) => {
                     document.getElementById("online-users-count").innerHTML = response.totalOccupancy;
+                    console.log('here now', response)
                 }).catch((error) => {
                     console.log(error)
                 });

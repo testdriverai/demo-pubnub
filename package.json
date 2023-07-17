@@ -1,0 +1,25 @@
+{
+  "name": "demo-pubnub",
+  "version": "1.0.0",
+  "description": "Javascript Chat App Tutorial",
+  "main": "server.js",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "iconv-lite": "^0.6.3",
+    "pubnub": "^7.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PubNubDevelopers/Javascript-Chat-Tutorial-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PubNubDevelopers/Javascript-Chat-Tutorial-App/issues"
+  },
+  "homepage": "https://github.com/PubNubDevelopers/Javascript-Chat-Tutorial-App#readme"
+}
