@@ -1,8 +1,8 @@
 # The best way to debug your PubNub app
 
-It's hard to catch bugs. It's even harder to catch them when you're working with multiple clients, servers, and networking between them. Even when you find them, dscribing the steps to reproduce and opening a support ticket can be it's own challenge.
+It's hard to catch bugs. It's even harder to catch them when you're working with multiple clients, servers, and networking between them. Even when you find them, describing the steps to reproduce and opening a support ticket can be its own challenge.
 
-Today, we'll cover the best tequnique for debugging PubNub apps, [Dashcam](https://dashcam.io). This guide will help you, and PubNub support, debug your app quickly. After all, any time spent on bugs is time that could be spent on features!
+Today, we'll cover the best technique for debugging PubNub apps, [Dashcam](https://dashcam.io). This guide will help you, and PubNub support, debug your app quickly. After all, any time spent on bugs is time that could be spent on features!
 
 ## Introducing Dashcam
 
@@ -10,7 +10,9 @@ https://github.com/dashcamio/demo-pubnub/assets/318295/41e4e50f-38c6-4166-8587-d
 
 [_See the full Dashcam demo here._](https://app.dashcam.io/replay/64b9a08096497100601dbfdf?share=xrsbBettcayvHD2gMglQjg)
 
-Dashcam is a screen recorder for debugging. It's an all-in-one debugging tool that makes it simple to find and fix bugs in complex apps. When you encounter an error, Dashcam will play back your screen in-sync with terminal, logs, and network requests in a format called a "Dash."
+Dashcam is a screen recorder for debugging. It's an all-in-one debugging tool that makes it simple to find and fix bugs in complex apps. When you encounter an error, Dashcam will play back your screen in sync with terminal, logs, and network requests in a format called a "Dash." 
+
+Note that Dashcam is free for individuals and local first. Nothing gets uploaded without your review and approval.
 
 This form of debugging is known as time-travel debugging. Time Travel Debugging (TTD) can help you debug issues easier by letting you "rewind" your desktop, instead of having to reproduce the issue until you find the bug.
 
@@ -18,11 +20,11 @@ This form of debugging is known as time-travel debugging. Time Travel Debugging 
 
 <img src="https://github.com/dashcamio/demo-pubnub/assets/318295/2ceae4ca-9602-4f78-93be-5ae8e054f2a7" width="900"/>
 
-With Dashcam, you can rewind and playback your PubNub logs and network requests from both the server and client! As the desktop screen recording plays, the logs will appear in sync. Now, you can step through your program execution to see what went wrong!
+With Dashcam, you can rewind and playback your PubNub logs and network requests from both the server and the client! As the desktop screen recording plays, the logs will appear in sync. Now, you can step through your program execution to see what went wrong!
 
-- **Server Logs:** Debug your PubNub channel creation and PAM by combining front end and back end logs
-- **Console Logs from Chrome:** - Capture logs from multiple tabs and play them back together
-- **Network Requests from Chrome:** - See all the outgoing and incoming network requests from the PubNub SDK
+- **Server Logs:** Debug your PubNub channel creation and PAM by combining front-end and back-end logs
+- **Console Logs from Chrome:** Capture logs from multiple tabs and play them back together
+- **Network Requests from Chrome:** See all the outgoing and incoming network requests from the PubNub SDK
 
 ## Tips for Debugging PubNub
 
@@ -34,7 +36,7 @@ Then you can click on a request to see the request and response information.
 
 <img src="https://github.com/dashcamio/demo-pubnub/assets/318295/58e82171-7eb8-420c-b41f-89a63493c415" width="300" />
 
-In this demo we also enable `logVerbosity: true`, which enables PubNub's own debugging information to appear in the console.
+In this demo, we also enable `logVerbosity: true`, which enables PubNub's own debugging information to appear in the console.
 
 <img src="https://github.com/dashcamio/demo-pubnub/assets/318295/6dffecc0-0338-4889-9e05-bf010a82fd40" width="300" />
 
@@ -58,7 +60,7 @@ Dashcam is a desktop app available for Mac and Windows. You can download it from
 
 ![image](https://github.com/dashcamio/demo-pubnub/assets/318295/646f6e00-50d8-4770-8692-0c069d93df01)
 
-If your PubNub app has a web frontend, you'll want to get [the Dashcam Chrome Extension](https://chrome.google.com/webstore/detail/dashcam/dkcoeknmlfnfimigfagbcjgpokhdcbbp). This will allow you capture console logs and network requests from your application front-end.
+If your PubNub app has a web frontend, you'll want to get [the Dashcam Chrome Extension](https://chrome.google.com/webstore/detail/dashcam/dkcoeknmlfnfimigfagbcjgpokhdcbbp). This will allow you to capture console logs and network requests from your application front-end.
 
 With the desktop app open, you'll know the Chrome Extension is working if you see the "Connected" state indicator.
 
@@ -75,21 +77,21 @@ http://localhost:8080
 http*://*.yourapp.com*
 ```
 
-Note that the patterns allow for wildcards like `*`, so you could use `localhost:*` for broader injestion from any port.
+Note that the patterns allow for wildcards like `*`, so you could use `localhost:*` for broader injection from any port.
 
 ![image](https://github.com/dashcamio/demo-pubnub/assets/318295/afd05af6-ed1c-4d22-b2fa-14e868338c73)
 
-Now visit your website. Open Dashcam and click on the terminal icon. You should see a confirmation that Dashcam has recieved logs from the Chrome Extension.
+Now visit your website. Open Dashcam and click on the terminal icon. You should see a confirmation that Dashcam has received logs from the Chrome Extension.
 
 ![image](https://github.com/dashcamio/demo-pubnub/assets/318295/1fd3b702-445c-4d3a-ab0c-85aaa686938d)
 
-Now, any dash you create with Dashcam will contain the logs from your front-end!
+Now, any dash you create with Dashcam will contain the logs from your front end!
 
 #### Capture server logs from terminal
 
-Now we're going to do a similar configuration for the server. Dashcam can tail any logfile to capture those logs and display them in sync with your screen replay. You can select any number of logfiles or even make new ones just for Dashcam.
+Now we're going to do a similar configuration for the server. Dashcam can tail any log file to capture those logs and display them in sync with your screen replay. You can select any number of log files or even make new ones just for Dashcam.
 
-To set up logfile tracking, open the Dashcam desktop app. In the "Logs" settings of Dashcam desktop app, add a `application` pattern. This pattern is typically a logfile. If your application already has a logfile somewhere, select that file instead. For this tutorial, we'll make a new file called `pubnub.log`.
+To set up logfile tracking, open the Dashcam desktop app. In the "Logs" settings of the Dashcam desktop app, add an `application` pattern. This pattern is typically a log file. If your application already has a log file somewhere, select that file instead. For this tutorial, we'll make a new file called `pubnub.log`.
 
 ```
 /tmp/pubnub.log
@@ -103,5 +105,8 @@ node server.js 2>&1 | tee -a /tmp/pubnub.log
 
 Open Dashcam again, and verify that both your front-end and back-end logs are being captured by Dashcam!
 
-![](https://media.cleanshot.cloud/media/31192/6diu1QCmRYzjuxBvuv5gJjBdgR4mIAPtCYnDv8Ow.jpeg?Expires=1689904446&Signature=tIBrIHr-fkOtQ-pefEK28cllc03wvgzorRQ7tbBjzsLT8zRwFSgVcN7Qojw3wFAayzbi3bniuJ~q-HBPrmpvBj-KxWejNVGUJ4TOVv9d9Mu1quoDp1ZSAMe1luuZMQ155x-UfpErgKlQIV2jyiZmZfPH-PG0sxVe6i5e-67phwXzjagH4rfPSaRrulL74GSUT3xeUn8O4kn2sio9mHD0EyEWuZMeCVTwbvw51ELaYHZ4PrkuL4tcKIvJkGSQfiaGsjwk46ATeRTno5gWDJWR~k8lQImtN7cMkqYypT5HMoJ9xjNZMzyhzb8KV3NRnpYXPdmLdG85Q5XJ1d49aUyMCQ__&Key-Pair-Id=K269JMAT9ZF4GZ)
+![image](https://github.com/dashcamio/demo-pubnub/assets/318295/fb1c5c6e-8e98-4f76-8d69-1174d26bd599)
 
+## Conclusion
+
+That's it! Now you're all set up. Now whenever you encounter an issue with PubNub or otherwise, you'll be able to travel back in time to see what caused the bug. And when you get stumped, you can share your dash to get help.
