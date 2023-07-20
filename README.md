@@ -4,13 +4,13 @@ It's hard to catch bugs. It's even harder to catch them when you're working with
 
 Today, we'll cover the best tequnique for debugging PubNub apps, Dashcam. This guide will help you, and PubNub support, debug your app quickly. After all, any time spent on bugs is time that could be spent on features!
 
-// Dashcam Demo
+https://github.com/dashcamio/demo-pubnub/assets/318295/aa93ea55-010b-4187-a1dd-6de761a8d5c7
 
 Dashcam is an all-in-one debugging tool that makes it simple to find and fix bugs in complex apps. Dashcam is a screen recorder for debugging. When you encounter an error, Dashcam will play back your screen in-sync with terminal, logs, and network requests.
 
 This form of debugging is known as time-travel debugging. Time Travel Debugging (TTD) can help you debug issues easier by letting you "rewind" your desktop, instead of having to reproduce the issue until you find the bug.
 
-In this guide, we'll be starting with [the PubNub JS Chat example](https://www.pubnub.com/tutorials/javascript-sdk-chat-app/?step=build-and-run). You can find our full code [here]().
+In this guide, we'll be starting with [the PubNub JS Chat example](https://www.pubnub.com/tutorials/javascript-sdk-chat-app/?step=build-and-run). You can find our full code [here](https://github.com/dashcamio/demo-pubnub/).
 
 ## 1. Download Dashcam
 
@@ -18,7 +18,7 @@ Dashcam is a desktop app available for Mac and Windows. You can download it from
 
 ## 2. Install the Dashcam Chrome Extension
 
-![](https://media.cleanshot.cloud/media/31192/uoaUhy4LYKw7lqsOcVinKHFXeZPPtV1P8pNzQUnr.jpeg?Expires=1689899840&Signature=aVmYPzVW-ZNsEMKMgz0PGZPWOZOu~jXe7z3hY7qRto6N-fGft2jWCIEo4Qs73AcPWDwSbjRnvCb6tkLFTETKuko7L9w9XZLHpWg5IvxHVQdv67Rklf09~VzK8yBcjTXAR3ljCTqmCQE67UiO1BVHgKKdJCX1VzNp1ZPq58~1~Jjc~pLstdR6Rc5SgvgzOY98m6fcgAty0hoogdSFvzFrgdQq52sIjs07ylCZuXMhGck7tiVer6yByHE69ZYn5fC32V76dbQBPGDfeYG8dwShuHellb2k8jFHPZhQRG~-Js5leUuOQxJiq1MUvRvjMszyhPiCL0z28iJN5sQq0gyGCg__&Key-Pair-Id=K269JMAT9ZF4GZ)
+![image](https://github.com/dashcamio/demo-pubnub/assets/318295/646f6e00-50d8-4770-8692-0c069d93df01)
 
 If your PubNub app has a web frontend, you'll want to get [the Dashcam Chrome Extension](https://chrome.google.com/webstore/detail/dashcam/dkcoeknmlfnfimigfagbcjgpokhdcbbp). This will allow you capture console logs and network requests from your application front-end.
 
@@ -37,11 +37,11 @@ http*://*.yourapp.com*
 
 Note that the patterns allow for wildcards like `*`, so you could use `localhost:*` for broader injestion from any port.
 
-![](https://media.cleanshot.cloud/media/31192/ig9pLZkPIwM78elWmrIUiq9TxO2T0MCaNNu55fOG.jpeg?Expires=1689903692&Signature=rGOVNmSWm72iYzgQy-vrNkXC1Jb1wGop-N~yukbSFqVZ83sx5m2Z3CReuMOurvjsxsz-9bvHjlFU6QPLtUElrUlRnu2zvb86htEBAKF8tP276Hyax9WqNDof0BWqtxnbhwKHjbY4SZpHm2kb2DkqIcKl-1lqb4uQgOmLasGizPr~TrrDLr1GAuDXazY05601WZkvwHwulPRvVd8Low~OOYacorovStE6WTnVezitRJEYrWUjcPNkdMwhPzaK8sjSGnyNfgNdHO6jJ9aB50p9L9wPrYrCZNXDVU9de8jfaaPhrG4XrFAEHk25Wkpzk9VaQUEnV3BFxWem-YTCkvAdrA__&Key-Pair-Id=K269JMAT9ZF4GZ)
+![image](https://github.com/dashcamio/demo-pubnub/assets/318295/afd05af6-ed1c-4d22-b2fa-14e868338c73)
 
 Now visit your website. Open Dashcam and click on the terminal icon. You should see a confirmation that Dashcam has recieved logs from the Chrome Extension.
 
-![](https://media.cleanshot.cloud/media/31192/xHfrFhxAxFhKpZ3etKhrSxtcHzxnrbNoNpN0yP32.jpeg?Expires=1689904008&Signature=oCw8WNairKxp4dBgRpe1YU7ND9oztAahcI0cuugsR35QwNeBKJZjYm~UyZAqV8NBbDoxLUeBwONKxBQeqpkJ1IoQSP~nmaeYuHVjtWe7osb7GhNww8SDLVluVfBDL2l2fBsGzzQOLpLj0YXxzj872Zhzi7XXkeypVnVTkCA05moRLaDQp~KoJp2DKn24Bh7pLed81KVvVuLlpOVaV5VBh3dc2jdSytp9QiJ2e4FtuDA86CdKCcRsGGaOYD6Ti-BIcwdq8znIgaLcS8IdTtPQX0p-c~Aeelr-MDdtNrDaqsj-2SQCWpA744wWGrUTz1uGGBXfGjqZ-UZdPfOk~O6ANw__&Key-Pair-Id=K269JMAT9ZF4GZ)
+![image](https://github.com/dashcamio/demo-pubnub/assets/318295/1fd3b702-445c-4d3a-ab0c-85aaa686938d)
 
 Now, any dash you create with Dashcam will contain the logs from your front-end!
 
@@ -69,6 +69,12 @@ Open Dashcam again, and verify that both your front-end and back-end logs are be
 
 Now when Dashcam detects an error, it will make a clip!
 
+https://github.com/dashcamio/demo-pubnub/assets/318295/49166d12-c7b7-449e-a993-84ceac8ee1a3
+
 ## 6. Debug with time travel
 
+https://github.com/dashcamio/demo-pubnub/assets/318295/42aeb58f-778c-44bd-af52-6665baee66e6
+
 ## 7. Share your bug reports
+
+https://github.com/dashcamio/demo-pubnub/assets/318295/8f2b905f-d291-4769-83fa-f11803150b3d
