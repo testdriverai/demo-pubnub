@@ -22,16 +22,6 @@ const listener = {
 };
 pubnub.addListener(listener);
 
-// publish message
-const publishMessage = async (message) => {
-  await pubnub.publish({
-    channel: "chat-channel",
-    message: {
-      message: message,
-    },
-  });
-};
-
 // subscribe to a channel
 pubnub.subscribe({
   channels: ["chat-channel"],
@@ -39,3 +29,5 @@ pubnub.subscribe({
 const showMessage = (msg) => {
   console.log("message: " + msg);
 };
+
+throw new Error("test");
