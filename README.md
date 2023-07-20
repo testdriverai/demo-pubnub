@@ -67,14 +67,34 @@ Open Dashcam again, and verify that both your front-end and back-end logs are be
 
 ## 5. Automatically detect errors
 
-Now when Dashcam detects an error, it will make a clip!
+Now when Dashcam detects an error, it will make a clip! 
 
 https://github.com/dashcamio/demo-pubnub/assets/318295/49166d12-c7b7-449e-a993-84ceac8ee1a3
+
+Dashcam looks for the text `error` (in any case) to detect errors. Right now your app probably doesn't have any errors, but you can add the following line to trigger an error:
+
+```js
+throw new Error("test");
+```
+
+Any error will trigger a new dash in the Dashcam feed!
+
+![](https://github.com/dashcamio/demo-pubnub/assets/318295/20f4d765-f797-47b0-a215-22c5a3727790)
 
 ## 6. Debug with time travel
 
 https://github.com/dashcamio/demo-pubnub/assets/318295/42aeb58f-778c-44bd-af52-6665baee66e6
 
+Now you can step through the logs that triggered the error. 
+
+- See all the logs from multiple chrome tabs
+- See the server logs
+- screen
+
 ## 7. Share your bug reports
+
+- Jira
+- GitHub
+- PubNub support
 
 https://github.com/dashcamio/demo-pubnub/assets/318295/8f2b905f-d291-4769-83fa-f11803150b3d
