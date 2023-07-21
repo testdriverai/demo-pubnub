@@ -1,18 +1,14 @@
 # The best way to debug your PubNub app
 
-It's hard to catch bugs. It's even harder to catch them when you're working with multiple clients, servers, and networking between them. Even when you find them, describing the steps to reproduce and opening a support ticket can be its own challenge.
+It's hard to catch bugs. It's even harder to catch them when you're working with multiple clients, servers, and networking between them - like when building with PubNub. Even when you find them, describing the steps to reproduce and opening a support ticket can be its own challenge.
 
-Today, we'll cover the best technique for debugging PubNub apps, [Dashcam](https://dashcam.io). This guide will help you, and PubNub support, debug your app quickly. After all, any time spent on bugs is time that could be spent on features!
-
-## Introducing Dashcam
+Today, we'll cover the best technique for debugging complex PubNub apps, [Dashcam](https://dashcam.io). This guide will help you, and PubNub support, debug your app quickly. After all, any time spent on bugs is time that could be spent on features!
 
 https://github.com/dashcamio/demo-pubnub/assets/318295/41e4e50f-38c6-4166-8587-d134a3f5e66d
 
 [_See the full Dashcam demo here._](https://app.dashcam.io/replay/64b9a08096497100601dbfdf?share=xrsbBettcayvHD2gMglQjg)
 
-Dashcam is a screen recorder for debugging. It's an all-in-one debugging tool that makes it simple to find and fix bugs in complex apps. When you encounter an error, Dashcam will play back your screen in sync with terminal, logs, and network requests in a format called a "Dash." 
-
-Note that Dashcam is free for individuals and local first. Nothing gets uploaded without your review and approval.
+Dashcam is a screen recorder for debugging. It's an all-in-one debugging tool that makes it simple to find and fix bugs in complex apps. When you encounter an error with PubNub, Dashcam will play back your screen in sync with terminal, logs, and network requests in a format called a "Dash." 
 
 This form of debugging is known as time-travel debugging. Time Travel Debugging (TTD) can help you debug issues easier by letting you "rewind" your desktop, instead of having to reproduce the issue until you find the bug.
 
